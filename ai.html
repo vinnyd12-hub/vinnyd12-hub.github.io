@@ -136,13 +136,13 @@
         </div>
       </div>
 
-      <div class="post-card">
-        <p class="post-date">Coming Soon</p>
-        <h2 class="post-title">What are Large Language Models, really?</h2>
-        <p class="post-excerpt">A plain-english breakdown of how LLMs work under the hood — tokens, attention, and why scale matters so much.</p>
+      <div class="post-card" onclick="openArticle('article2')">
+        <p class="post-date">March 2026</p>
+        <h2 class="post-title">AI Shift: Training to Inference</h2>
+        <p class="post-excerpt">While the last two years were defined by the multi-billion dollar arms race to train the largest models, the next frontier of value is being captured in inference. Understanding this shift is critical to identifying which players in the AI stack will maintain their dominance as 'reasoning' becomes the new benchmark for performance.</p>
         <div class="post-footer">
           <span class="post-tag">Fundamentals</span>
-          <span class="read-more">Coming →</span>
+          <span class="read-more">Read →</span>
         </div>
       </div>
 
@@ -287,6 +287,49 @@
       </div>
     </div>
   </div>
+  <div class="overlay" id="article2">
+  <div class="article-wrap">
+    <button class="article-back" onclick="closeArticle('article2')">← Back to AI</button>
+    <p class="article-tag">Fundamentals</p>
+    <h1 ="article-title">AI Shift: Training to Inference</h1>
+    <p class="article-meta">March 2026 · 8 min read</p>
+    <div class="article-body">
+
+      <p>As the industry shifts toward inference, the "winners" in the hardware stack are pivoting from selling "supercomputers" to selling "optimized engines."</p>
+
+      <h2>1. NVIDIA: From Training King to Inference Leader</h2>
+      <p>While NVIDIA dominates training with the H100, they are pivoting hard toward inference with their new Blackwell (B200) architecture.</p>
+      <p><strong>The Difference:</strong> Training chips need massive "interconnects" (NVLink) so thousands of chips can talk to each other. Inference chips need Memory Bandwidth.</p>
+      <p><strong>How they benefit:</strong> Blackwell is designed with a "Transformer Engine" that allows models to run in a lower-precision format (FP4). This makes inference up to 30x faster than previous generations, allowing NVIDIA to keep their high margins even as the market shifts.</p>
+
+      <h2>2. AMD: The "Memory Capacity" Challenger</h2>
+      <p>AMD's Instinct MI300X and MI325X chips are specifically gaining ground because they often have more memory than NVIDIA's H100.</p>
+      <p><strong>The Difference:</strong> Large Language Models (LLMs) are "heavy." If a chip doesn't have enough memory (HBM), you have to split the model across multiple expensive chips just to run it.</p>
+      <p><strong>How they benefit:</strong> Because AMD chips (like the MI325X) offer up to 256GB of memory, they can sometimes run an entire massive model on a single chip. This makes them a "Total Cost of Ownership" (TCO) favorite for companies looking to save money on inference.</p>
+
+      <h2>3. Broadcom (AVGO): The Custom ASIC Powerhouse</h2>
+      <p>Broadcom doesn't sell "general" chips like NVIDIA. They help companies like Google (TPU) and Meta (MTIA) build Custom ASICs (Application-Specific Integrated Circuits).</p>
+      <p><strong>The Difference:</strong> A general GPU is like a Swiss Army knife — it can do everything (training and inference). An ASIC is like a professional chef's knife — it is designed to do one thing (inference) perfectly.</p>
+      <p><strong>How they benefit:</strong> As companies like Google and Meta scale, they realize it's cheaper to build their own inference-only chips than to keep buying $30,000 NVIDIA GPUs. Broadcom provides the "plumbing" and design expertise for these custom chips.</p>
+
+      <h2>4. TSMC: The Universal Manufacturer</h2>
+      <p>TSMC is the "foundry" that actually physically builds the chips for NVIDIA, AMD, and Broadcom.</p>
+      <p><strong>The Difference:</strong> While the design of an inference chip is different, the manufacturing process is largely the same. However, inference chips often use newer, more power-efficient nodes (3nm or 2nm) because they are designed to run 24/7 in data centers.</p>
+      <p><strong>How they benefit:</strong> TSMC wins regardless of who wins the chip war. As inference explodes, the volume of chips needed increases exponentially. Instead of one cluster for training, you need thousands of clusters globally for inference.</p>
+
+      <h2>5. ASML: The Enabler of "Small and Efficient"</h2>
+      <p>ASML makes the EUV (Extreme Ultraviolet) lithography machines that TSMC uses to print the chips.</p>
+      <p><strong>The Difference:</strong> To make inference cost-effective, chips need to be tiny and use very little power. This requires "High-NA EUV" machines — the most advanced tools ASML makes.</p>
+      <p><strong>How they benefit:</strong> The shift to inference drives the need for "Edge AI" (chips in your phone or car). These chips must be incredibly small and efficient. ASML is the only company in the world that makes the machines capable of printing these next-generation, high-efficiency circuits.</p>
+
+      <h2>Summary</h2>
+      <p><strong>Training is about Scale</strong> — More = Better.</p>
+      <p><strong>Inference is about Efficiency</strong> — Faster/Cheaper = Better.</p>
+      <p><strong>The Winners:</strong> NVIDIA and AMD fight for the high-end "thinking" market; Broadcom wins as big tech builds their own custom tools; and TSMC/ASML win because they are the only ones who can physically build this future.</p>
+
+    </div>
+  </div>
+</div>
 
   <script>
     // Hero image
